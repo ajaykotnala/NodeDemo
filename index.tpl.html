@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AVEVA.Online</title>
+    
+    <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+
+    <link href="styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="styles/app.css" rel="stylesheet" type="text/css" />
+
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV == 'PRODUCTION' -->
+
+    <!-- include: "type": "css", "files": "dist/**/*.css" -->
+
+    <!-- @endif -->
+
+</head>
+<body ng-app="aveva.online" ng-controller="AppController">
+
+    <div ng-include="'templates/app.html'"></div>
+
+    <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+
+    <!-- bower:js -->
+    <!-- endbower -->
+
+    <!-- include: "type": "js", "files": "scripts/**/*.js" -->
+
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV == 'PRODUCTION' -->
+
+    <!-- include: "type": "js", "files": "dist/**/*.js" -->
+
+    <!-- @endif -->
+</body>
+</html>
